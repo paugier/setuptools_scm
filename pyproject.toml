@@ -2,6 +2,5 @@
 requires = [
     "setuptools>=45",
     "packaging>=20.0",
-    "typing_extensions",
 ]
 build-backend = "setuptools.build_meta"

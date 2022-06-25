@@ -4,8 +4,8 @@ import os
 from contextlib import suppress
 from datetime import date
 from datetime import datetime
+from typing import TYPE_CHECKING
 
-from . import _types as _t
 from .git import GitWorkdir
 from .hg import HgWorkdir
 from .utils import _CmdResult
@@ -13,6 +13,8 @@ from .utils import do_ex
 from .utils import require_command
 from .utils import trace
 
+if TYPE_CHECKING:
+    from . import _types as _t
 
 _FAKE_GIT_DESCRIBE_ERROR = _CmdResult("<>hg git failed", "", 1)
 
